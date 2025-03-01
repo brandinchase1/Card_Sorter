@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <title>MTG OCR Camera</title>
+</head>
+<body>
+    <h1>MTG Card Scanner</h1>
+    
+    <div id="main_container">
+        <div id="video_container">
+            <h2>Video Playback</h2>
+            <video id="video" autoplay></video>
+            </br>
+            <div id="button_container">
+                <button class="button" onclick="captureFrame()">Capture & Detect</button>
+                <button class="button" onclick="clearLog()">Clear Log</button>
+                <button class="button" id="start_stop" onclick="toggle_camera()">Start Camera</button>
+            </div>
+        </div>
+        
+        <div id="text_container">
+            <h2>Detected Cards:</h2>
+            <textarea id="cardData" rows="15" cols="40"></textarea>
+            </br>
+            <h2>Log:</h2>
+            <textarea id="log" rows="15" cols="40"></textarea>
+        </div>
+
+        <canvas id="img_canvas"></canvas>
+        
+    </div>
+
+</body>
+</html>
